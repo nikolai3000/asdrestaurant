@@ -26,9 +26,8 @@
 					%h1.white-text ASD Restaurant
 					%p#is-open Open now!!!
 			%nav.fixed.top.right.white-text#navigation
-					%ul.list-inline.navigation
-						%li Home
-						%li Menu
-						%li Gallery
-						%li Contact Us
-						%li Location
+	-menu = ["Home", "Menu", "Gallery", "Contact", "Location"]
+	%ul.list-inline.navigation
+		-menu.each do |item|
+			%li= item
+
